@@ -75,7 +75,7 @@ end
 # Server 1 Configuration
 config.vm.define "server1" do |server1|
   server1.vm.box = "sysadmingroup/rhel8node"
-  server1.vm.synced_folder ansible", "/vagrant", type: "rsync", rsync__exclude: [".git/", "disk-0-1.vdi", "disk-0-2.vdi", ".github"]
+  server1.vm.synced_folder "ansible", "/vagrant", type: "rsync", rsync__exclude: [".git/", "disk-0-1.vdi", "disk-0-2.vdi", ".github"]
 #  server1.vm.hostname = "server1.eight.example.com"
   server1.vm.network "private_network", ip: "192.168.55.150"
   server1.vm.provider :virtualbox do |server1|
