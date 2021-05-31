@@ -14,7 +14,7 @@ config.vm.define "server2" do |server2|
   server2.vm.network "private_network", ip: "192.168.55.151"
   server2.vm.network "private_network", ip: "192.168.55.175"
   server2.vm.network "private_network", ip: "192.168.55.176"
-  server2.vm.synced_folder ".", "/vagrant", type: "rsync", rsync__exclude: [".git/", "disk-0-1.vdi", "disk-0-2.vdi", ".github"]
+  server2.vm.synced_folder "ansible", "/vagrant", type: "rsync", rsync__exclude: [".git/", "disk-0-1.vdi", "disk-0-2.vdi", ".github"]
   server2.vm.provider "virtualbox" do |server2|
     server2.customize ['storagectl', :id, '--name', 'SATA Controller', '--add', 'sata', '--portcount', 2]
 
@@ -64,7 +64,7 @@ config.vm.define "repo" do |repo|
   repo.vm.provision :shell, :inline => "sudo sed -i 's/PasswordAuthentication no/PasswordAuthentication yes/g' /etc/ssh/sshd_config; sudo systemctl restart sshd;", run: "always"
   repo.vm.provision :shell, :inline => "yum install https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm -y; sudo yum install -y sshpass python3-pip python3-devel httpd sshpass vsftpd createrepo", run: "always"
   repo.vm.provision :shell, :inline => " python3 -m pip install -U pip ; python3 -m pip install pexpect; python3 -m pip install ansible", run: "always"
-  repo.vm.synced_folder ".", "/vagrant", type: "rsync", rsync__exclude: [".git/", "disk-0-1.vdi", "disk-0-2.vdi", ".github"]
+  repo.vm.synced_folder "ansible", "/vagrant", type: "rsync", rsync__exclude: [".git/", "disk-0-1.vdi", "disk-0-2.vdi", ".github"]
   repo.vm.network "private_network", ip: "192.168.55.149"
 
   repo.vm.provider "virtualbox" do |repo|
@@ -75,7 +75,7 @@ end
 # Server 1 Configuration
 config.vm.define "server1" do |server1|
   server1.vm.box = "rdbreak/rhel8node"
-  server1.vm.synced_folder ".", "/vagrant", type: "rsync", rsync__exclude: [".git/", "disk-0-1.vdi", "disk-0-2.vdi", ".github"]
+  server1.vm.synced_folder ansible", "/vagrant", type: "rsync", rsync__exclude: [".git/", "disk-0-1.vdi", "disk-0-2.vdi", ".github"]
 #  server1.vm.hostname = "server1.eight.example.com"
   server1.vm.network "private_network", ip: "192.168.55.150"
   server1.vm.provider :virtualbox do |server1|
