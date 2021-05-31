@@ -17,3 +17,13 @@ git clone https://github.com/sysadmingroup/rhcsa.git . <br>
 vagrant up <br>
 
 
+## steps to distroy all VM images (if you want to recreate from scratch) <br>
+open cmd and run below commands
+cd %HOMEPATH%\bin
+vagrant destroy -f
+
+## again run below command to recreate VM setup
+open cmd and run below commands
+cd %HOMEPATH%\bin
+vagrant up
+
