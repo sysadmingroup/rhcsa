@@ -5,7 +5,7 @@ _Powered by Ansible and Vagrant_
 # Installation options below:
 ## Windows 10 OS
 #Prerequisites
-Download and install Virtual Box from https://www.virtualbox.org/wiki/Downloads
+Download and install Virtual Box from https://www.virtualbox.org/wiki/Downloads <br>
 Download and install Vagrant from https://www.vagrantup.com/downloads
 Download and install Git from https://git-scm.com/download/win
 
