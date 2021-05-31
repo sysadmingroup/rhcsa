@@ -1,10 +1,10 @@
-# RHCSA 8 Automated Practice Deployment
-_Powered by Ansible and Vagrant_ 
-# SysAdminGroup http://www.sysadmin.co.in
+# RHCSA 8 Automated Practice Deployment <br>
+_Powered by Ansible and Vagrant_  <br>
+# SysAdminGroup http://www.sysadmin.co.in <br>
 
-# Installation options below:
-## Windows 10 OS
-#Prerequisites
+# Installation options below: <br>
+## Windows 10 OS <br>
+#Prerequisites <br>
 Download and install Virtual Box from https://www.virtualbox.org/wiki/Downloads <br>
 Download and install Vagrant from https://www.vagrantup.com/downloads <br>
 Download and install Git from https://git-scm.com/download/win <br>
