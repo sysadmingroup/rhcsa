@@ -12,7 +12,7 @@ Download and install Git from https://git-scm.com/download/win <br>
 ## open cmd and run below commands 
 
 mkdir %HOMEPATH%\bin <br>
-cd %HOMEPATH%\bina <br>
+cd %HOMEPATH%\bin <br>
 git clone https://github.com/sysadmingroup/rhcsa.git . <br>
 vagrant up <br>
 
