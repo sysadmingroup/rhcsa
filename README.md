@@ -18,12 +18,11 @@ vagrant up <br>
 
 
 ## steps to distroy all VM images (if you want to recreate from scratch) <br>
-open cmd and run below commands
-cd %HOMEPATH%\bin
-vagrant destroy -f
+open cmd and run below commands<br>
+cd %HOMEPATH%\bin<br>
+vagrant destroy -f<br>
 
-## again run below command to recreate VM setup
-open cmd and run below commands
-cd %HOMEPATH%\bin
-vagrant up
-
+## again run below command to recreate VM setup<br>
+open cmd and run below commands<br>
+cd %HOMEPATH%\bin<br>
+vagrant up<br>
