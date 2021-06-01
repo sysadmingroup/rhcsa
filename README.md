@@ -26,3 +26,8 @@ vagrant destroy -f<br>
 open cmd and run below commands<br>
 cd %HOMEPATH%\bin<br>
 vagrant up<br>
+
+## Note:
+Repo URLs
+BaseOS http://192.168.55.149/BaseOS
+AppStream http://192.168.55.149/AppStream 
