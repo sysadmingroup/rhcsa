@@ -16,7 +16,7 @@ config.vm.define "server2" do |server2|
   server2.vm.network "private_network", ip: "192.168.55.176"
   server2.vm.synced_folder "ansible", "/vagrant", type: "rsync", rsync__exclude: [".git/", "disk-0-1.vdi", "disk-0-2.vdi", ".github"]
   server2.vm.provider "virtualbox" do |server2|
-  server2.customize ['storagectl', :id, '--name', 'SATA Controller', '--remove']
+# server2.customize ['storagectl', :id, '--name', 'SATA Controller', '--remove']
   server2.customize ['storagectl', :id, '--name', 'SATA Controller', '--add', 'sata', '--portcount', 2]
 
     unless File.exist?(file_to_disk1)
