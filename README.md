@@ -29,5 +29,5 @@ vagrant up<br>
 
 ## Note:
 Repo URLs
-BaseOS http://192.168.55.149/BaseOS
+BaseOS http://192.168.55.149/BaseOS<br>
 AppStream http://192.168.55.149/AppStream 
