@@ -9,7 +9,7 @@ config.vm.box_check_update = false
 
 # Server 2 Configuration
 config.vm.define "server2" do |server2|
-  server2.vm.box = "rdbreak/rhel8node"
+  server2.vm.box = "sysadmingroup/rhel8node"
 #  server2.vm.hostname = "server2.eight.example.com"
   server2.vm.network "private_network", ip: "192.168.55.151"
   server2.vm.network "private_network", ip: "192.168.55.175"
@@ -59,7 +59,7 @@ end
 
 # Repo Configuration
 config.vm.define "repo" do |repo|
-  repo.vm.box = "rdbreak/rhel8repo"
+  repo.vm.box = "sysadmingroup/rhel8repo"
 # repo.vm.hostname = "repo.example.com"
   repo.vm.provision :shell, :inline => "sudo rm -rf /EMPTY", run: "always"
   repo.vm.provision :shell, :inline => "sudo sed -i 's/PasswordAuthentication no/PasswordAuthentication yes/g' /etc/ssh/sshd_config; sudo systemctl restart sshd;", run: "always"
@@ -75,7 +75,7 @@ end
 
 # Server 1 Configuration
 config.vm.define "server1" do |server1|
-  server1.vm.box = "rdbreak/rhel8node"
+  server1.vm.box = "sysadmingroup/rhel8node"
   server1.vm.synced_folder "ansible", "/vagrant", type: "rsync", rsync__exclude: [".git/", "disk-0-1.vdi", "disk-0-2.vdi", ".github"]
 #  server1.vm.hostname = "server1.eight.example.com"
   server1.vm.network "private_network", ip: "192.168.55.150"
